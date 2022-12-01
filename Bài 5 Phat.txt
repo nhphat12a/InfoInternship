@@ -1,0 +1,31 @@
+Question: Cho 1 mảng số nguyên hãy tìm các phần tử xuất hiện lẻ lần trong mảng
+Ví dụ: 
+[7] => return 7
+[1,9,9,1,1,1,5,0,3,5,0,9] =>return [3, 9]
+
+*** Answer
+        public int[] Bai5()
+        {
+            int count = 0;
+            List<int> mangchuale=new List<int>();
+            int[] mangso = new int[] { 1, 9, 9, 1, 1, 1, 5, 0, 3, 5, 0, 9 };
+            for(int i = 0; i < mangso.Length; i++)
+            {
+                for (int j = 0; j < mangso.Length; j++)
+                {
+                    if (mangso[j] == mangso[i])
+                        count++;
+                }
+                if (count % 2 != 0)
+                {
+                    mangchuale.Add(mangso[i]);
+                    //Sau khi thêm phần tử xuất hiện lẻ lần vào list mới, xóa bỏ phần từ đó khỏi mảng
+                    var list = mangso.ToList();                
+                    list.Remove(mangso[i]);
+                    mangso = list.ToArray();
+                }
+                count = 0;
+            }
+            Console.ReadLine();
+            return mangchuale.ToArray();
+        }
