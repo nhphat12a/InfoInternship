@@ -1,0 +1,13 @@
+ElasticSearch là công cụ tìm kiếm dựa trên nền tảng Apache Lucene, cung cấp bộ máy dạng phân tán có đầy đủ công cụ với giao diện HTTP có hỗ trợ JSON
+Kibana là Giao diện người dùng mã nguồn mở dùng để hiển thị nội dung dữ liệu của ElasticSearch
+Serilog: là thư viện chuẩn đoán và ghi lại những log, hỗ trợ cho các phần mềm .Net
+
+Các cấp độ log trong ASP .Net:
+Level 0 - Trace: chứa nhiều thông tin chi tiết nhất và cũng có thể chứa nhiều dữ liệu nhạy cảm của ứng dụng
+Level 1 - Debug: chứa những thông tin được dùng để gỡ lỗi trong quá trình phát triển, và không có giá trị lâu dài
+Level 2 - Information: dùng để theo dõi luồng ứng dụng chung và có giá trị lâu dài
+Level 3 - Warning: cho biết những sự bất thường trong luồng ứng dụng nhưng không làm ứng dụng ngừng hoạt động
+Level 4 - Error: chỉ ra rằng khi luồng thực hiện hiện tại của ứng dụng bị dừng do có lỗi xảy ra, log này sẽ chỉ ra lỗi đã xảy ra tại luồng hiện tại và không phải chỉ ra lỗi toàn bộ ứng dụng
+Level 5 - Critical: log này chỉ ra ứng dụng bị lỗi, sự cố hệ thống hoặc một lỗi rất nghiêm trọng đã xảy ra và cần phải chú ý ngay lập tức
+Level 6 - None: không hiển thị ra bất ký log nào và cũng như không ghi nhận bất kỳ log nào
+
